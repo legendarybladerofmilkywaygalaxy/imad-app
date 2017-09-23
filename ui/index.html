@@ -1,22 +1,19 @@
-<!doctype html>
+<!Doctype html>
 <html>
-    <head>
-        <title>
-            Mohana Vamsi
-        </title>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
     <body>
-        <div class="center">
-            <img src="https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg " class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            <marquee>
-            Hi! I am Mohan Vamsi
-            </marquee>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+        
+        FB.api({
+    method:     "pages.isFan",
+    page_id:        page_id,
+},  function(response) {
+        console.log(response);
+        if(response){
+            alert('You Likey');
+        } else {
+            alert('You not Likey :(');
+        }
+    }
+);
     </body>
+    
 </html>
